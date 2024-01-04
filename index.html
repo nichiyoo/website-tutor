@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap&family=Nunito:wght@200;300;400;600;700;800;900&display=swap"
+			rel="stylesheet" />
+
+		<!-- Tailwind CSS and Alpine.js -->
+		<link rel="stylesheet" href="css/styles.css" />
+		<script src="//unpkg.com/alpinejs" defer></script>
+	</head>
+
+	<body
+		class="bg-zinc-100 antialiased font-nunito text-zinc-900 scroll-smooth">
+		<nav>
+			<div class="container mx-auto px-4 py-6">
+				<div class="flex justify-between items-center">
+					<a href="#" class="flex items-center space-x-2">
+						<img src="images/logo.svg" alt="logo" class="h-8 w-8" />
+						<span class="font-extrabold font-jakarta text-lg">
+							Tutorqmedan
+						</span>
+					</a>
+					<ul
+						class="hidden lg:flex justify-between items-center space-x-4">
+						<li>
+							<a href="#" class="hover:text-cyan-500"> Home </a>
+						</li>
+						<li>
+							<a href="#about" class="hover:text-cyan-500">
+								Tentang Kami
+							</a>
+						</li>
+						<li>
+							<a href="#program" class="hover:text-cyan-500">
+								Program
+							</a>
+						</li>
+						<li>
+							<a href="#keunggulan" class="hover:text-cyan-500">
+								Keunggulan
+							</a>
+						</li>
+					</ul>
+
+					<div
+						id="mobile"
+						class="lg:hidden relative"
+						x-data="{ open: false }">
+						<button
+							@click="open = !open"
+							class="h-8 w-8 rounded-lg bg-cyan-400 hover:bg-cyan-500">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="24"
+								height="24"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								class="h-5 w-5 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-zinc-50">
+								<line x1="4" x2="20" y1="12" y2="12" />
+								<line x1="4" x2="20" y1="6" y2="6" />
+								<line x1="4" x2="20" y1="18" y2="18" />
+							</svg>
+						</button>
+
+						<!-- dropdown -->
+						<div
+							x-show="open"
+							@click.away="open = false"
+							class="absolute -top-0 left-0 -ml-[150px] w-[180px] bg-zinc-50 z-10 mt-10 rounded-lg border border-zinc-200"
+							style="display: none;">
+							<div class="mx-auto p-6">
+								<ul
+									class="flex flex-col justify-between space-y-2">
+									<li>
+										<a
+											href="#"
+											class="hover:text-cyan-500"
+											@click="open = false">
+											Home
+										</a>
+									</li>
+									<li>
+										<a
+											href="#about"
+											class="hover:text-cyan-500"
+											@click="open = false">
+											Tentang Kami
+										</a>
+									</li>
+									<li>
+										<a
+											href="#program"
+											class="hover:text-cyan-500"
+											@click="open = false">
+											Program
+										</a>
+									</li>
+									<li>
+										<a
+											href="#keunggulan"
+											class="hover:text-cyan-500"
+											@click="open = false">
+											Keunggulan
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<section id="hero" class="py-20">
+			<div class="container mx-auto px-4">
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+					<div class="order-2 lg:order-1">
+						<h1
+							class="font-jakarta font-extrabold text-5xl lg:text-6xl mb-4">
+							Selamat datang di TutorQ Medan
+						</h1>
+						<p class="text-zinc-600 leading-relaxed mb-5">
+							TutorQMedan.com adalah lembaga penyedia jasa guru
+							les privat ke Rumah untuk tingkat TK, SD, SMP baik
+							kurikulum Nasional maupun kurikulum Internasional
+							meliputi seluruh daerah kota Medan.
+						</p>
+						<a
+							href="#program"
+							class="bg-cyan-400 px-6 py-2 text-sm font-bold text-zinc-50 tracking-wide font-nunito rounded-lg
+                            hover:bg-cyan-500 transition duration-200 ease-in-out">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="24"
+								height="24"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								class="h-4 w-4 mr-2 inline">
+								<path d="m22 2-7 20-4-9-9-4Z" />
+								<path d="M22 2 11 13" />
+							</svg>
+							Lihat Program
+						</a>
+					</div>
+
+					<div class="order-1 lg:order-2">
+						<img
+							src="images/hero.png"
+							alt="hero"
+							class="w-full mx-auto max-w-[600px] rounded-xl" />
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="about" class="py-20 bg-zinc-50">
+			<div class="container mx-auto px-4">
+				<span class="text-cyan-500 text-center block font-bold">
+					About
+				</span>
+				<h3
+					class="text-center font-extrabold font-jakarta text-3xl lg:text-4xl mb-4">
+					Tentang Kami
+				</h3>
+				<p
+					class="text-zinc-600 leading-relaxed mb-5 max-w-4xl text-center mx-auto">
+					<span
+						class="underline decoration-cyan-500 decoration-wavy hover:bg-cyan-500 hover:text-zinc-50 transition duration-200 ease-in-out underline-offset-2 hover:no-underline cursor-default">
+						TutorQMedan.com
+					</span>
+					adalah lembaga penyedia jasa guru les privat ke Rumah untuk
+					tingkat TK, SD, SMP baik kurikulum Nasional maupun kurikulum
+					Internasional meliputi seluruh daerah kota Medan. Guru-guru
+					kami berasal dari guru sekolah nasional dan internasional,
+					lulusan Universitas Terbaik yang telah terseleksi dan
+					berpengalaman.
+					<span
+						class="underline decoration-cyan-500 decoration-wavy hover:bg-cyan-500 hover:text-zinc-50 transition duration-200 ease-in-out underline-offset-2 hover:no-underline cursor-default">
+						TutorQMedan.com
+					</span>
+					akan membimbing siswa-siswa masuk masuk SMP/SMA Favorit,
+					memperoleh nilai UAS yang tinggi dan mendapat nilai ulangan
+					dan nilai rapor yang bagus. Konsep pembelajaran sesuai
+					dengan kurikulum yang diajarkan di sekolah.
+				</p>
+			</div>
+		</section>
+
+		<section id="program" class="py-20">
+			<div class="container mx-auto px-4">
+				<span class="text-cyan-500 text-center block font-bold">
+					Program
+				</span>
+				<h3
+					class="text-center font-extrabold font-jakarta text-3xl lg:text-4xl mb-4">
+					Pilih Program yang Kami Tawarkan
+				</h3>
+				<p
+					class="text-zinc-600 leading-relaxed mb-8 max-w-4xl text-center mx-auto">
+					Kami menyediakan beberapa program yang dapat anda pilih
+					sesuai dengan kebutuhan anda, berikut adalah program yang
+					kami tawarkan.
+				</p>
+
+				<div
+					class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+					<a
+						href="https://wa.me/6285831563835"
+						class="bg-zinc-50 rounded-xl overflow-hidden group">
+						<div class="aspect-square overflow-hidden mb-2">
+							<img
+								src="images/preschool.jpg"
+								alt=""
+								class="w-full h-full object-cover hover:scale-[1.05] transition duration-200 ease-in-out" />
+						</div>
+						<div class="p-6">
+							<h4
+								class="font-extrabold font-jakarta text-lg mb-2 group-hover:text-cyan-500">
+								Les Privat TK / K1 / K2
+							</h4>
+							<p class="text-zinc-600 leading-relaxed mb-5">
+								Meningkatkan kemampuan anak sejak usia dini
+								dalam membaca, menulis dan menghitung ( les
+								calistung). Cara belajar disusun sedemikian rupa
+								oleh guru berpengalaman dengan suasana yang
+								menyenangkan.
+								<br />
+								<br />
+								<span class="font-bold">
+									Materi Kurikulum International (Phonics ,
+									Reading , Spelling , Counting)
+								</span>
+							</p>
+						</div>
+					</a>
+					<a
+						href="https://wa.me/6285831563835"
+						class="bg-zinc-50 rounded-xl overflow-hidden group">
+						<div class="aspect-square overflow-hidden mb-2">
+							<img
+								src="images/primary.jpg"
+								alt=""
+								class="w-full h-full object-cover hover:scale-[1.05] transition duration-200 ease-in-out" />
+						</div>
+						<div class="p-6">
+							<h4
+								class="font-extrabold font-jakarta text-lg mb-2 group-hover:text-cyan-500">
+								Les Privat SD / PRIMARY
+							</h4>
+							<p class="text-zinc-600 leading-relaxed mb-5">
+								Meningkatkan minat belajar anak sejak sekolah
+								dasar. Program Les Privat Sekolah Dasar ini
+								dirancang untuk mengakselerasi daya tarik anak
+								untuk selalu berprestasi. Kurikulum
+								Internasional dan Nasional sesuai dengan standar
+								sekolah peserta didik.
+								<br />
+								<br />
+								<span class="font-bold">
+									Materi Kurikulum International (All
+									Subjects)
+								</span>
+							</p>
+						</div>
+					</a>
+					<a
+						href="https://wa.me/6285831563835"
+						class="bg-zinc-50 rounded-xl overflow-hidden group">
+						<div class="aspect-square overflow-hidden mb-2">
+							<img
+								src="images/secondary.jpg"
+								alt=""
+								class="w-full h-full object-cover hover:scale-[1.05] transition duration-200 ease-in-out" />
+						</div>
+						<div class="p-6">
+							<h4
+								class="font-extrabold font-jakarta text-lg mb-2 group-hover:text-cyan-500">
+								Les Privat SMP / SECONDARY
+							</h4>
+							<p class="text-zinc-600 leading-relaxed mb-5">
+								Meningkatkan kemampuan anak dalam belajar dan
+								mengembangkan diri. Program Les Privat SMP
+								dirancang untuk membantu anak memetakan potensi
+								diri dan mulai mengembangkannya dalam kegiatan
+								sekolah.
+								<br />
+								<br />
+								<span class="font-bold">
+									Materi Kurikulum International (All
+									Subjects)
+								</span>
+							</p>
+						</div>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<section id="keunggulan" class="py-20">
+			<div class="container mx-auto px-4">
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+					<div>
+						<img
+							src="images/pros.png"
+							alt="keunggulan"
+							class="w-full mx-auto max-w-[600px] rounded-xl" />
+					</div>
+
+					<div>
+						<span class="text-cyan-500 block font-bold">
+							Keunggulan
+						</span>
+						<h3
+							class="font-extrabold font-jakarta text-3xl lg:text-4xl mb-4">
+							Kenapa pilih Tutor Q?
+						</h3>
+						<p
+							class="text-zinc-600 leading-relaxed mb-8 max-w-4xl mx-auto">
+							TutorQMedan.com adalah lembaga penyedia jasa guru
+							les privat ke Rumah untuk tingkat TK, SD, SMP baik
+							kurikulum Nasional maupun kurikulum Internasional
+							meliputi seluruh daerah kota Medan.
+						</p>
+
+						<div class="flex flex-col divide-y-2">
+							<div class="flex group items-start space-x-4 py-4">
+								<div
+									class="relative h-10 w-10 bg-cyan-500 rounded-full flex-none">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										width="24"
+										height="24"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										class="h-5 w-5 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-zinc-50">
+										<path
+											d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" />
+										<path d="m15 9-6 6" />
+										<path d="M9 9h.01" />
+										<path d="M15 15h.01" />
+									</svg>
+								</div>
+								<div>
+									<h5
+										class="font-bold font-jakarta group-hover:text-cyan-500">
+										Biaya pendaftaran gratis
+									</h5>
+									<p class="text-zinc-600 leading-relaxed">
+										Bebas biaya pendaftaran, tidak dipungut
+										biaya. Siswa langsung mendapatkan guru
+										les privat sesuai yang diinginkan.
+									</p>
+								</div>
+							</div>
+							<div class="flex group items-start space-x-4 py-4">
+								<div
+									class="relative h-10 w-10 bg-cyan-500 rounded-full flex-none">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										width="24"
+										height="24"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										class="h-5 w-5 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-zinc-50">
+										<rect
+											width="18"
+											height="18"
+											x="3"
+											y="4"
+											rx="2"
+											ry="2" />
+										<line x1="16" x2="16" y1="2" y2="6" />
+										<line x1="8" x2="8" y1="2" y2="6" />
+										<line x1="3" x2="21" y1="10" y2="10" />
+										<path d="m9 16 2 2 4-4" />
+									</svg>
+								</div>
+								<div>
+									<h5
+										class="font-bold font-jakarta group-hover:text-cyan-500">
+										Pembayaran biaya di Akhir Bulan.
+									</h5>
+									<p class="text-zinc-600 leading-relaxed">
+										Pembayaran dilakukan diakhir bulan
+										melalui transfer ke rekening
+										TutorQMedan.com.Jadi tidak melakukan
+										pembayaran di awal bulan.
+									</p>
+								</div>
+							</div>
+							<div class="flex group items-start space-x-4 py-4">
+								<div
+									class="relative h-10 w-10 bg-cyan-500 rounded-full flex-none">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										width="24"
+										height="24"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										class="h-5 w-5 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-zinc-50">
+										<path d="M6 3h12l4 6-10 13L2 9Z" />
+										<path d="M11 3 8 9l4 13 4-13-3-6" />
+										<path d="M2 9h20" />
+									</svg>
+								</div>
+								<div>
+									<h5
+										class="font-bold font-jakarta group-hover:text-cyan-500">
+										Guru Les yang berkualitas
+									</h5>
+									<p class="text-zinc-600 leading-relaxed">
+										Guru-guru yang kami pilih sudah memiliki
+										pengalaman dan lulu seleksi serta micro
+										teaching. Orang tua bisa request
+										kriteria guru yang diinginkan.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="py-20 bg-cyan-500 text-zinc-50">
+			<div class="container mx-auto px-4">
+				<span class="text-zinc-50 text-center block font-bold">
+					Keunggulan
+				</span>
+				<h3
+					class="text-center font-extrabold font-jakarta text-3xl lg:text-4xl mb-4">
+					Alasan Lain memilih Tutor Q
+				</h3>
+				<p
+					class="text-cyan-50 leading-relaxed mb-8 max-w-4xl text-center mx-auto">
+					Kami menyediakan beberapa program yang dapat anda pilih
+					sesuai dengan kebutuhan anda, berikut adalah program yang
+					kami tawarkan.
+				</p>
+
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+					<div class="flex flex-col p-8 rounded-xl bg-cyan-600">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							class="h-8 w-8 text-white mb-4">
+							<path
+								d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" />
+							<polyline points="10 2 10 10 13 7 16 10 16 2" />
+						</svg>
+
+						<h5 class="font-bold font-jakarta mb-4">
+							Guru Les yang berkualitas
+						</h5>
+						<p class="text-cyan-50 leading-relaxed mb-5">
+							Kami selalu memantau dan mengevaluasi perkembangan
+							belajar siswa. Kami juga memantau dan memastikan
+							guru hadir sesuai jadwal dan memberikan pengajaran
+							dengan baik. Kami akan mengganti guru apabila siswa
+							kurang nyaman belajar dengan guru dan tidak memenuhi
+							akademis siswa.
+						</p>
+					</div>
+					<div class="flex flex-col p-8 rounded-xl bg-cyan-600">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							class="h-8 w-8 text-white mb-4">
+							<path
+								d="M8 3H2v15h7c1.7 0 3 1.3 3 3V7c0-2.2-1.8-4-4-4Z" />
+							<path d="m16 12 2 2 4-4" />
+							<path
+								d="M22 6V3h-6c-2.2 0-4 1.8-4 4v14c0-1.7 1.3-3 3-3h7v-2.3" />
+						</svg>
+
+						<h5 class="font-bold font-jakarta mb-4">
+							Full Services
+						</h5>
+						<p class="text-cyan-50 leading-relaxed mb-5">
+							Kami siap membantu dan menjadi solusi atas
+							permasalahan Anda terkait perkembangan belajar putra
+							putri Anda, pergantian tutor, penambahan atau
+							pergantian jadwal, pembayaran maupun komplain
+							tentang kegiatan belajar mengajar privat yang
+							diselenggarakan oleh TutorQMedan.com.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="alamat" class="py-20 bg-zinc-50">
+			<div class="container mx-auto px-4">
+				<span class="text-cyan-500 text-center block font-bold">
+					Alamat
+				</span>
+				<h3
+					class="text-center font-extrabold font-jakarta text-3xl lg:text-4xl mb-4">
+					Alamat Kami
+				</h3>
+				<p
+					class="text-zinc-600 leading-relaxed mb-5 max-w-4xl text-center mx-auto text-balance">
+					<span
+						class="underline decoration-cyan-500 decoration-wavy hover:bg-cyan-500 hover:text-zinc-50 transition duration-200 ease-in-out underline-offset-2 hover:no-underline cursor-default">
+						TutorQMedan.com
+					</span>
+					beralamat di Tasbi 1 Blok AA No. 50 Medan Sunggal, Kota
+					Medan. Silahkan hubungi kami untuk informasi lebih lanjut.
+				</p>
+
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1316.1297169438644!2d98.63247383330494!3d3.567970587852401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30312f0b9b9475c9%3A0x9e0f31dfc30abe5c!2sTasbi%201%20blok%20AA%201!5e0!3m2!1sen!2sid!4v1704349702700!5m2!1sen!2sid"
+					height="600"
+					loading="lazy"
+					allowfullscreen="false"
+					referrerpolicy="no-referrer-when-downgrade"
+					class="mx-auto w-full rounded-xl focus:outline-none">
+				</iframe>
+			</div>
+		</section>
+
+		<footer class="py-20 bg-zinc-100">
+			<div class="container mx-auto px-4">
+				<div class="flex items-start justify-between flex-wrap">
+					<div class="w-full max-w-sm">
+						<a href="#" class="flex items-center space-x-2 mb-4">
+							<img
+								src="images/logo.svg"
+								alt="logo"
+								class="h-8 w-8" />
+							<span class="font-extrabold font-jakarta text-lg">
+								Tutorqmedan
+							</span>
+						</a>
+						<p class="text-zinc-600 leading-relaxed mb-5">
+							Kami siap membantu dan menjadi solusi atas
+							permasalahan Anda terkait perkembangan belajar putra
+							putri Anda.
+						</p>
+
+						<p class="text-zinc-600 leading-relaxed mb-5">
+							<span class="font-bold block">Alamat</span>
+							Tasbi 1 Blok AA No. 50 Medan Sunggal
+							<br />
+							<span class="font-bold block">Email</span>
+							<a
+								href="mailto:lesprivatmedan@gmail.com"
+								class="hover:text-cyan-500">
+								lesprivatmedan@gmail.com
+							</a>
+							<br />
+							<span class="font-bold block">Telepon</span>
+							<a
+								href="tel:+6285831563835"
+								class="hover:text-cyan-500">
+								085831563835
+							</a>
+						</p>
+					</div>
+
+					<div class="grid grid-cols-2 gap-10">
+						<nav>
+							<h5 class="font-bold font-jakarta mb-4">Menu</h5>
+							<ul>
+								<li>
+									<a href="#" class="hover:text-cyan-500">
+										Home
+									</a>
+								</li>
+								<li>
+									<a
+										href="#about"
+										class="hover:text-cyan-500">
+										Tentang Kami
+									</a>
+								</li>
+								<li>
+									<a
+										href="#program"
+										class="hover:text-cyan-500">
+										Program
+									</a>
+								</li>
+								<li>
+									<a
+										href="#keunggulan"
+										class="hover:text-cyan-500">
+										Keunggulan
+									</a>
+								</li>
+							</ul>
+						</nav>
+
+						<div>
+							<h5 class="font-bold font-jakarta mb-4">
+								Tutor Q Privat Medan
+							</h5>
+							<p class="text-zinc-600 leading-relaxed mb-5">
+								<span class="font-bold">Senin - Jumat</span>
+								07.00 - 22.00
+								<br />
+								<span class="font-bold">Sabtu - Minggu</span>
+								08.000 - 21.00
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
