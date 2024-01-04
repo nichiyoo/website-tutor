@@ -58,12 +58,14 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap&family=Nunito:wght@200;300;400;600;700;800;900&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap&family=Nunito:wght@400;700&display=swap"
 			rel="stylesheet" />
 
 		<!-- Tailwind CSS and Alpine.js -->
 		<link rel="stylesheet" href="css/styles.css" />
-		<script src="//unpkg.com/alpinejs" defer></script>
+		<script
+			defer
+			src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
 	</head>
 
 	<body
@@ -80,20 +82,20 @@
 					<ul
 						class="items-center justify-between hidden space-x-4 lg:flex">
 						<li>
-							<a href="#" class="hover:text-cyan-500"> Home </a>
+							<a href="#" class="hover:text-cyan-400"> Home </a>
 						</li>
 						<li>
-							<a href="#about" class="hover:text-cyan-500">
+							<a href="#about" class="hover:text-cyan-400">
 								Tentang Kami
 							</a>
 						</li>
 						<li>
-							<a href="#program" class="hover:text-cyan-500">
+							<a href="#program" class="hover:text-cyan-400">
 								Program
 							</a>
 						</li>
 						<li>
-							<a href="#keunggulan" class="hover:text-cyan-500">
+							<a href="#keunggulan" class="hover:text-cyan-400">
 								Keunggulan
 							</a>
 						</li>
@@ -104,6 +106,7 @@
 						class="relative lg:hidden"
 						x-data="{ open: false }">
 						<button
+							area-label="menu"
 							@click="open = !open"
 							class="w-8 h-8 rounded-lg bg-cyan-400 hover:bg-cyan-500">
 							<svg
@@ -121,6 +124,7 @@
 								<line x1="4" x2="20" y1="6" y2="6" />
 								<line x1="4" x2="20" y1="18" y2="18" />
 							</svg>
+							<span class="sr-only">Menu</span>
 						</button>
 
 						<!-- dropdown -->
@@ -135,7 +139,7 @@
 									<li>
 										<a
 											href="#"
-											class="hover:text-cyan-500"
+											class="hover:text-cyan-400"
 											@click="open = false">
 											Home
 										</a>
@@ -143,7 +147,7 @@
 									<li>
 										<a
 											href="#about"
-											class="hover:text-cyan-500"
+											class="hover:text-cyan-400"
 											@click="open = false">
 											Tentang Kami
 										</a>
@@ -151,7 +155,7 @@
 									<li>
 										<a
 											href="#program"
-											class="hover:text-cyan-500"
+											class="hover:text-cyan-400"
 											@click="open = false">
 											Program
 										</a>
@@ -159,7 +163,7 @@
 									<li>
 										<a
 											href="#keunggulan"
-											class="hover:text-cyan-500"
+											class="hover:text-cyan-400"
 											@click="open = false">
 											Keunggulan
 										</a>
@@ -209,9 +213,11 @@
 
 					<div class="order-1 lg:order-2">
 						<img
-							src="images/hero.png"
+							src="images/hero.webp"
 							alt="hero"
-							class="w-full mx-auto max-w-[600px] rounded-xl" />
+							width="600"
+							height="600"
+							class="w-full mx-auto max-w-[600px]" />
 					</div>
 				</div>
 			</div>
@@ -219,17 +225,17 @@
 
 		<section id="about" class="py-20 bg-zinc-50">
 			<div class="container px-4 mx-auto">
-				<span class="block font-bold text-center text-cyan-500">
+				<span class="block font-bold text-center text-cyan-400">
 					About
 				</span>
-				<h3
+				<h2
 					class="mb-4 text-3xl font-extrabold text-center font-jakarta lg:text-4xl">
 					Tentang Kami
-				</h3>
+				</h2>
 				<p
 					class="max-w-4xl mx-auto mb-5 leading-relaxed text-center text-zinc-600">
 					<span
-						class="underline transition duration-200 ease-in-out cursor-default decoration-cyan-500 decoration-wavy hover:bg-cyan-500 hover:text-zinc-50 underline-offset-2 hover:no-underline">
+						class="underline transition duration-200 ease-in-out cursor-default decoration-cyan-400 decoration-wavy hover:bg-cyan-400 hover:text-zinc-50 underline-offset-2 hover:no-underline">
 						TutorQMedan.com
 					</span>
 					adalah lembaga penyedia jasa guru les privat ke Rumah untuk
@@ -239,7 +245,7 @@
 					lulusan Universitas Terbaik yang telah terseleksi dan
 					berpengalaman.
 					<span
-						class="underline transition duration-200 ease-in-out cursor-default decoration-cyan-500 decoration-wavy hover:bg-cyan-500 hover:text-zinc-50 underline-offset-2 hover:no-underline">
+						class="underline transition duration-200 ease-in-out cursor-default decoration-cyan-400 decoration-wavy hover:bg-cyan-400 hover:text-zinc-50 underline-offset-2 hover:no-underline">
 						TutorQMedan.com
 					</span>
 					akan membimbing siswa-siswa masuk masuk SMP/SMA Favorit,
@@ -252,13 +258,13 @@
 
 		<section id="program" class="py-20">
 			<div class="container px-4 mx-auto">
-				<span class="block font-bold text-center text-cyan-500">
+				<span class="block font-bold text-center text-cyan-400">
 					Program
 				</span>
-				<h3
+				<h2
 					class="mb-4 text-3xl font-extrabold text-center font-jakarta lg:text-4xl">
 					Pilih Program yang Kami Tawarkan
-				</h3>
+				</h2>
 				<p
 					class="max-w-4xl mx-auto mb-8 leading-relaxed text-center text-zinc-600">
 					Kami menyediakan beberapa program yang dapat anda pilih
@@ -272,10 +278,10 @@
 						href="https://wa.me/6285831563835"
 						class="overflow-hidden border border-cyan-400 bg-zinc-50 rounded-xl group">
 						<div class="p-8">
-							<h4
-								class="mb-2 text-lg font-extrabold font-jakarta group-hover:text-cyan-500">
+							<h3
+								class="mb-2 text-lg font-extrabold font-jakarta group-hover:text-cyan-400">
 								Les Privat TK / K1 / K2
-							</h4>
+							</h3>
 							<p class="leading-relaxed text-zinc-600">
 								Meningkatkan kemampuan anak sejak usia dini
 								dalam membaca, menulis dan menghitung ( les
@@ -295,10 +301,10 @@
 						href="https://wa.me/6285831563835"
 						class="overflow-hidden border border-cyan-400 bg-zinc-50 rounded-xl group">
 						<div class="p-8">
-							<h4
-								class="mb-2 text-lg font-extrabold font-jakarta group-hover:text-cyan-500">
+							<h3
+								class="mb-2 text-lg font-extrabold font-jakarta group-hover:text-cyan-400">
 								Les Privat SD / PRIMARY
-							</h4>
+							</h3>
 							<p class="leading-relaxed text-zinc-600">
 								Meningkatkan minat belajar anak sejak sekolah
 								dasar. Program Les Privat Sekolah Dasar ini
@@ -319,10 +325,10 @@
 						href="https://wa.me/6285831563835"
 						class="overflow-hidden border border-cyan-400 bg-zinc-50 rounded-xl group">
 						<div class="p-8">
-							<h4
-								class="mb-2 text-lg font-extrabold font-jakarta group-hover:text-cyan-500">
+							<h3
+								class="mb-2 text-lg font-extrabold font-jakarta group-hover:text-cyan-400">
 								Les Privat SMP / SECONDARY
-							</h4>
+							</h3>
 							<p class="leading-relaxed text-zinc-600">
 								Meningkatkan kemampuan anak dalam belajar dan
 								mengembangkan diri. Program Les Privat SMP
@@ -347,19 +353,22 @@
 				<div class="grid items-start grid-cols-1 gap-8 lg:grid-cols-2">
 					<div>
 						<img
-							src="images/pros.png"
+							loading="lazy"
+							src="images/pros.webp"
 							alt="keunggulan"
-							class="w-full mx-auto max-w-[600px] rounded-xl" />
+							width="600"
+							height="600"
+							class="w-full mx-auto max-w-[600px]" />
 					</div>
 
 					<div>
-						<span class="block font-bold text-cyan-500">
+						<span class="block font-bold text-cyan-400">
 							Keunggulan
 						</span>
-						<h3
+						<h2
 							class="mb-4 text-3xl font-extrabold font-jakarta lg:text-4xl">
 							Kenapa pilih Tutor Q?
-						</h3>
+						</h2>
 						<p
 							class="max-w-4xl mx-auto mb-8 leading-relaxed text-zinc-600">
 							TutorQMedan.com adalah lembaga penyedia jasa guru
@@ -371,7 +380,7 @@
 						<div class="flex flex-col divide-y-2">
 							<div class="flex items-start py-4 space-x-4 group">
 								<div
-									class="relative flex-none w-10 h-10 rounded-full bg-cyan-500">
+									class="relative flex-none w-10 h-10 rounded-full bg-cyan-400">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
 										width="24"
@@ -391,10 +400,10 @@
 									</svg>
 								</div>
 								<div>
-									<h5
-										class="font-bold font-jakarta group-hover:text-cyan-500">
+									<h3
+										class="font-bold font-jakarta group-hover:text-cyan-400">
 										Biaya pendaftaran gratis
-									</h5>
+									</h3>
 									<p class="leading-relaxed text-zinc-600">
 										Bebas biaya pendaftaran, tidak dipungut
 										biaya. Siswa langsung mendapatkan guru
@@ -404,7 +413,7 @@
 							</div>
 							<div class="flex items-start py-4 space-x-4 group">
 								<div
-									class="relative flex-none w-10 h-10 rounded-full bg-cyan-500">
+									class="relative flex-none w-10 h-10 rounded-full bg-cyan-400">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
 										width="24"
@@ -430,10 +439,10 @@
 									</svg>
 								</div>
 								<div>
-									<h5
-										class="font-bold font-jakarta group-hover:text-cyan-500">
+									<h3
+										class="font-bold font-jakarta group-hover:text-cyan-400">
 										Pembayaran biaya di Akhir Bulan.
-									</h5>
+									</h3>
 									<p class="leading-relaxed text-zinc-600">
 										Pembayaran dilakukan diakhir bulan
 										melalui transfer ke rekening
@@ -444,7 +453,7 @@
 							</div>
 							<div class="flex items-start py-4 space-x-4 group">
 								<div
-									class="relative flex-none w-10 h-10 rounded-full bg-cyan-500">
+									class="relative flex-none w-10 h-10 rounded-full bg-cyan-400">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
 										width="24"
@@ -462,10 +471,10 @@
 									</svg>
 								</div>
 								<div>
-									<h5
-										class="font-bold font-jakarta group-hover:text-cyan-500">
+									<h3
+										class="font-bold font-jakarta group-hover:text-cyan-400">
 										Guru Les yang berkualitas
-									</h5>
+									</h3>
 									<p class="leading-relaxed text-zinc-600">
 										Guru-guru yang kami pilih sudah memiliki
 										pengalaman dan lulu seleksi serta micro
@@ -514,9 +523,9 @@
 							<polyline points="10 2 10 10 13 7 16 10 16 2" />
 						</svg>
 
-						<h5 class="mb-4 font-bold font-jakarta">
+						<h3 class="mb-4 font-bold font-jakarta">
 							Guru Les yang berkualitas
-						</h5>
+						</h3>
 						<p class="mb-5 leading-relaxed text-cyan-50">
 							Kami selalu memantau dan mengevaluasi perkembangan
 							belajar siswa. Kami juga memantau dan memastikan
@@ -545,9 +554,9 @@
 								d="M22 6V3h-6c-2.2 0-4 1.8-4 4v14c0-1.7 1.3-3 3-3h7v-2.3" />
 						</svg>
 
-						<h5 class="mb-4 font-bold font-jakarta">
+						<h3 class="mb-4 font-bold font-jakarta">
 							Full Services
-						</h5>
+						</h3>
 						<p class="mb-5 leading-relaxed text-cyan-50">
 							Kami siap membantu dan menjadi solusi atas
 							permasalahan Anda terkait perkembangan belajar putra
@@ -563,7 +572,7 @@
 
 		<section id="alamat" class="py-20 bg-zinc-50">
 			<div class="container px-4 mx-auto">
-				<span class="block font-bold text-center text-cyan-500">
+				<span class="block font-bold text-center text-cyan-400">
 					Alamat
 				</span>
 				<h3
@@ -573,7 +582,7 @@
 				<p
 					class="max-w-4xl mx-auto mb-5 leading-relaxed text-center text-zinc-600 text-balance">
 					<span
-						class="underline transition duration-200 ease-in-out cursor-default decoration-cyan-500 decoration-wavy hover:bg-cyan-500 hover:text-zinc-50 underline-offset-2 hover:no-underline">
+						class="underline transition duration-200 ease-in-out cursor-default decoration-cyan-500 decoration-wavy hover:bg-cyan-400 hover:text-zinc-50 underline-offset-2 hover:no-underline">
 						TutorQMedan.com
 					</span>
 					beralamat di Tasbi 1 Blok AA No. 50 Medan Sunggal, Kota
@@ -582,11 +591,13 @@
 
 				<iframe
 					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1316.1297169438644!2d98.63247383330494!3d3.567970587852401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30312f0b9b9475c9%3A0x9e0f31dfc30abe5c!2sTasbi%201%20blok%20AA%201!5e0!3m2!1sen!2sid!4v1704349702700!5m2!1sen!2sid"
+					name="maps"
+					title="maps"
 					height="600"
 					loading="lazy"
 					allowfullscreen="false"
 					referrerpolicy="no-referrer-when-downgrade"
-					class="w-full mx-auto rounded-xl focus:outline-none">
+					class="w-full mx-max-w-[600px] focus:outline-none">
 				</iframe>
 			</div>
 		</section>
@@ -617,14 +628,14 @@
 							<span class="block font-bold">Instagram</span>
 							<a
 								href="https://www.instagram.com/tutorqprivatemedan"
-								class="hover:text-cyan-500">
+								class="hover:text-cyan-400">
 								@tutorqprivatemedan
 							</a>
 							<br />
 							<span class="block font-bold">Telepon</span>
 							<a
 								href="tel:+6285831563835"
-								class="hover:text-cyan-500">
+								class="hover:text-cyan-400">
 								085831563835
 							</a>
 						</p>
@@ -632,31 +643,33 @@
 
 					<div class="grid grid-cols-2 gap-10">
 						<nav>
-							<h5 class="mb-4 font-bold font-jakarta">Menu</h5>
-							<ul>
+							<span class="block mb-4 font-bold font-jakarta">
+								Menu
+							</span>
+							<ul class="flex flex-col space-y-2">
 								<li>
-									<a href="#" class="hover:text-cyan-500">
+									<a href="#" class="hover:text-cyan-400">
 										Home
 									</a>
 								</li>
 								<li>
 									<a
 										href="#about"
-										class="hover:text-cyan-500">
+										class="hover:text-cyan-400">
 										Tentang Kami
 									</a>
 								</li>
 								<li>
 									<a
 										href="#program"
-										class="hover:text-cyan-500">
+										class="hover:text-cyan-400">
 										Program
 									</a>
 								</li>
 								<li>
 									<a
 										href="#keunggulan"
-										class="hover:text-cyan-500">
+										class="hover:text-cyan-400">
 										Keunggulan
 									</a>
 								</li>
@@ -664,9 +677,9 @@
 						</nav>
 
 						<div>
-							<h5 class="mb-4 font-bold font-jakarta">
+							<span class="block mb-4 font-bold font-jakarta">
 								Tutor Q Privat Medan
-							</h5>
+							</span>
 							<p class="mb-5 leading-relaxed text-zinc-600">
 								<span class="font-bold">Senin - Jumat</span>
 								07.00 - 22.00
