@@ -44,18 +44,18 @@
 	</head>
 
 	<body
-		class="bg-zinc-100 antialiased font-nunito text-zinc-900 scroll-smooth">
+		class="antialiased bg-zinc-100 font-nunito text-zinc-900 scroll-smooth">
 		<nav>
-			<div class="container mx-auto px-4 py-6">
-				<div class="flex justify-between items-center">
+			<div class="container px-4 py-6 mx-auto">
+				<div class="flex items-center justify-between">
 					<a href="#" class="flex items-center space-x-2">
-						<img src="images/logo.svg" alt="logo" class="h-8 w-8" />
-						<span class="font-extrabold font-jakarta text-lg">
+						<img src="images/logo.svg" alt="logo" class="w-8 h-8" />
+						<span class="text-lg font-extrabold font-jakarta">
 							Tutorqmedan
 						</span>
 					</a>
 					<ul
-						class="hidden lg:flex justify-between items-center space-x-4">
+						class="items-center justify-between hidden space-x-4 lg:flex">
 						<li>
 							<a href="#" class="hover:text-cyan-500"> Home </a>
 						</li>
@@ -78,11 +78,11 @@
 
 					<div
 						id="mobile"
-						class="lg:hidden relative"
+						class="relative lg:hidden"
 						x-data="{ open: false }">
 						<button
 							@click="open = !open"
-							class="h-8 w-8 rounded-lg bg-cyan-400 hover:bg-cyan-500">
+							class="w-8 h-8 rounded-lg bg-cyan-400 hover:bg-cyan-500">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								width="24"
@@ -93,7 +93,7 @@
 								stroke-width="2"
 								stroke-linecap="round"
 								stroke-linejoin="round"
-								class="h-5 w-5 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-zinc-50">
+								class="absolute w-5 h-5 transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 text-zinc-50">
 								<line x1="4" x2="20" y1="12" y2="12" />
 								<line x1="4" x2="20" y1="6" y2="6" />
 								<line x1="4" x2="20" y1="18" y2="18" />
@@ -106,7 +106,7 @@
 							@click.away="open = false"
 							class="absolute -top-0 left-0 -ml-[150px] w-[180px] bg-zinc-50 z-10 mt-10 rounded-lg border border-zinc-200"
 							style="display: none;">
-							<div class="mx-auto p-6">
+							<div class="p-6 mx-auto">
 								<ul
 									class="flex flex-col justify-between space-y-2">
 									<li>
@@ -150,14 +150,14 @@
 		</nav>
 
 		<section id="hero" class="py-20">
-			<div class="container mx-auto px-4">
-				<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+			<div class="container px-4 mx-auto">
+				<div class="grid items-center grid-cols-1 gap-8 lg:grid-cols-2">
 					<div class="order-2 lg:order-1">
 						<h1
-							class="font-jakarta font-extrabold text-5xl lg:text-6xl mb-4">
+							class="mb-4 text-5xl font-extrabold font-jakarta lg:text-6xl">
 							Selamat datang di TutorQ Medan
 						</h1>
-						<p class="text-zinc-600 leading-relaxed mb-5">
+						<p class="mb-5 leading-relaxed text-zinc-600">
 							TutorQMedan.com adalah lembaga penyedia jasa guru
 							les privat ke Rumah untuk tingkat TK, SD, SMP baik
 							kurikulum Nasional maupun kurikulum Internasional
@@ -165,8 +165,7 @@
 						</p>
 						<a
 							href="#program"
-							class="bg-cyan-400 px-6 py-2 text-sm font-bold text-zinc-50 tracking-wide font-nunito rounded-lg
-                            hover:bg-cyan-500 transition duration-200 ease-in-out">
+							class="px-6 py-2 text-sm font-bold tracking-wide transition duration-200 ease-in-out rounded-lg bg-cyan-400 text-zinc-50 font-nunito hover:bg-cyan-500">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								width="24"
@@ -177,7 +176,7 @@
 								stroke-width="2"
 								stroke-linecap="round"
 								stroke-linejoin="round"
-								class="h-4 w-4 mr-2 inline">
+								class="inline w-4 h-4 mr-2">
 								<path d="m22 2-7 20-4-9-9-4Z" />
 								<path d="M22 2 11 13" />
 							</svg>
@@ -196,18 +195,18 @@
 		</section>
 
 		<section id="about" class="py-20 bg-zinc-50">
-			<div class="container mx-auto px-4">
-				<span class="text-cyan-500 text-center block font-bold">
+			<div class="container px-4 mx-auto">
+				<span class="block font-bold text-center text-cyan-500">
 					About
 				</span>
 				<h3
-					class="text-center font-extrabold font-jakarta text-3xl lg:text-4xl mb-4">
+					class="mb-4 text-3xl font-extrabold text-center font-jakarta lg:text-4xl">
 					Tentang Kami
 				</h3>
 				<p
-					class="text-zinc-600 leading-relaxed mb-5 max-w-4xl text-center mx-auto">
+					class="max-w-4xl mx-auto mb-5 leading-relaxed text-center text-zinc-600">
 					<span
-						class="underline decoration-cyan-500 decoration-wavy hover:bg-cyan-500 hover:text-zinc-50 transition duration-200 ease-in-out underline-offset-2 hover:no-underline cursor-default">
+						class="underline transition duration-200 ease-in-out cursor-default decoration-cyan-500 decoration-wavy hover:bg-cyan-500 hover:text-zinc-50 underline-offset-2 hover:no-underline">
 						TutorQMedan.com
 					</span>
 					adalah lembaga penyedia jasa guru les privat ke Rumah untuk
@@ -217,7 +216,7 @@
 					lulusan Universitas Terbaik yang telah terseleksi dan
 					berpengalaman.
 					<span
-						class="underline decoration-cyan-500 decoration-wavy hover:bg-cyan-500 hover:text-zinc-50 transition duration-200 ease-in-out underline-offset-2 hover:no-underline cursor-default">
+						class="underline transition duration-200 ease-in-out cursor-default decoration-cyan-500 decoration-wavy hover:bg-cyan-500 hover:text-zinc-50 underline-offset-2 hover:no-underline">
 						TutorQMedan.com
 					</span>
 					akan membimbing siswa-siswa masuk masuk SMP/SMA Favorit,
@@ -229,38 +228,32 @@
 		</section>
 
 		<section id="program" class="py-20">
-			<div class="container mx-auto px-4">
-				<span class="text-cyan-500 text-center block font-bold">
+			<div class="container px-4 mx-auto">
+				<span class="block font-bold text-center text-cyan-500">
 					Program
 				</span>
 				<h3
-					class="text-center font-extrabold font-jakarta text-3xl lg:text-4xl mb-4">
+					class="mb-4 text-3xl font-extrabold text-center font-jakarta lg:text-4xl">
 					Pilih Program yang Kami Tawarkan
 				</h3>
 				<p
-					class="text-zinc-600 leading-relaxed mb-8 max-w-4xl text-center mx-auto">
+					class="max-w-4xl mx-auto mb-8 leading-relaxed text-center text-zinc-600">
 					Kami menyediakan beberapa program yang dapat anda pilih
 					sesuai dengan kebutuhan anda, berikut adalah program yang
 					kami tawarkan.
 				</p>
 
 				<div
-					class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+					class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
 					<a
 						href="https://wa.me/6285831563835"
-						class="bg-zinc-50 rounded-xl overflow-hidden group">
-						<div class="aspect-square overflow-hidden mb-2">
-							<img
-								src="images/preschool.jpg"
-								alt=""
-								class="w-full h-full object-cover hover:scale-[1.05] transition duration-200 ease-in-out" />
-						</div>
-						<div class="p-6">
+						class="overflow-hidden border border-cyan-400 bg-zinc-50 rounded-xl group">
+						<div class="p-8">
 							<h4
-								class="font-extrabold font-jakarta text-lg mb-2 group-hover:text-cyan-500">
+								class="mb-2 text-lg font-extrabold font-jakarta group-hover:text-cyan-500">
 								Les Privat TK / K1 / K2
 							</h4>
-							<p class="text-zinc-600 leading-relaxed mb-5">
+							<p class="leading-relaxed text-zinc-600">
 								Meningkatkan kemampuan anak sejak usia dini
 								dalam membaca, menulis dan menghitung ( les
 								calistung). Cara belajar disusun sedemikian rupa
@@ -277,19 +270,13 @@
 					</a>
 					<a
 						href="https://wa.me/6285831563835"
-						class="bg-zinc-50 rounded-xl overflow-hidden group">
-						<div class="aspect-square overflow-hidden mb-2">
-							<img
-								src="images/primary.jpg"
-								alt=""
-								class="w-full h-full object-cover hover:scale-[1.05] transition duration-200 ease-in-out" />
-						</div>
-						<div class="p-6">
+						class="overflow-hidden border border-cyan-400 bg-zinc-50 rounded-xl group">
+						<div class="p-8">
 							<h4
-								class="font-extrabold font-jakarta text-lg mb-2 group-hover:text-cyan-500">
+								class="mb-2 text-lg font-extrabold font-jakarta group-hover:text-cyan-500">
 								Les Privat SD / PRIMARY
 							</h4>
-							<p class="text-zinc-600 leading-relaxed mb-5">
+							<p class="leading-relaxed text-zinc-600">
 								Meningkatkan minat belajar anak sejak sekolah
 								dasar. Program Les Privat Sekolah Dasar ini
 								dirancang untuk mengakselerasi daya tarik anak
@@ -307,19 +294,13 @@
 					</a>
 					<a
 						href="https://wa.me/6285831563835"
-						class="bg-zinc-50 rounded-xl overflow-hidden group">
-						<div class="aspect-square overflow-hidden mb-2">
-							<img
-								src="images/secondary.jpg"
-								alt=""
-								class="w-full h-full object-cover hover:scale-[1.05] transition duration-200 ease-in-out" />
-						</div>
-						<div class="p-6">
+						class="overflow-hidden border border-cyan-400 bg-zinc-50 rounded-xl group">
+						<div class="p-8">
 							<h4
-								class="font-extrabold font-jakarta text-lg mb-2 group-hover:text-cyan-500">
+								class="mb-2 text-lg font-extrabold font-jakarta group-hover:text-cyan-500">
 								Les Privat SMP / SECONDARY
 							</h4>
-							<p class="text-zinc-600 leading-relaxed mb-5">
+							<p class="leading-relaxed text-zinc-600">
 								Meningkatkan kemampuan anak dalam belajar dan
 								mengembangkan diri. Program Les Privat SMP
 								dirancang untuk membantu anak memetakan potensi
@@ -339,8 +320,8 @@
 		</section>
 
 		<section id="keunggulan" class="py-20">
-			<div class="container mx-auto px-4">
-				<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+			<div class="container px-4 mx-auto">
+				<div class="grid items-start grid-cols-1 gap-8 lg:grid-cols-2">
 					<div>
 						<img
 							src="images/pros.png"
@@ -349,15 +330,15 @@
 					</div>
 
 					<div>
-						<span class="text-cyan-500 block font-bold">
+						<span class="block font-bold text-cyan-500">
 							Keunggulan
 						</span>
 						<h3
-							class="font-extrabold font-jakarta text-3xl lg:text-4xl mb-4">
+							class="mb-4 text-3xl font-extrabold font-jakarta lg:text-4xl">
 							Kenapa pilih Tutor Q?
 						</h3>
 						<p
-							class="text-zinc-600 leading-relaxed mb-8 max-w-4xl mx-auto">
+							class="max-w-4xl mx-auto mb-8 leading-relaxed text-zinc-600">
 							TutorQMedan.com adalah lembaga penyedia jasa guru
 							les privat ke Rumah untuk tingkat TK, SD, SMP baik
 							kurikulum Nasional maupun kurikulum Internasional
@@ -365,9 +346,9 @@
 						</p>
 
 						<div class="flex flex-col divide-y-2">
-							<div class="flex group items-start space-x-4 py-4">
+							<div class="flex items-start py-4 space-x-4 group">
 								<div
-									class="relative h-10 w-10 bg-cyan-500 rounded-full flex-none">
+									class="relative flex-none w-10 h-10 rounded-full bg-cyan-500">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
 										width="24"
@@ -378,7 +359,7 @@
 										stroke-width="2"
 										stroke-linecap="round"
 										stroke-linejoin="round"
-										class="h-5 w-5 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-zinc-50">
+										class="absolute w-5 h-5 transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 text-zinc-50">
 										<path
 											d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" />
 										<path d="m15 9-6 6" />
@@ -391,16 +372,16 @@
 										class="font-bold font-jakarta group-hover:text-cyan-500">
 										Biaya pendaftaran gratis
 									</h5>
-									<p class="text-zinc-600 leading-relaxed">
+									<p class="leading-relaxed text-zinc-600">
 										Bebas biaya pendaftaran, tidak dipungut
 										biaya. Siswa langsung mendapatkan guru
 										les privat sesuai yang diinginkan.
 									</p>
 								</div>
 							</div>
-							<div class="flex group items-start space-x-4 py-4">
+							<div class="flex items-start py-4 space-x-4 group">
 								<div
-									class="relative h-10 w-10 bg-cyan-500 rounded-full flex-none">
+									class="relative flex-none w-10 h-10 rounded-full bg-cyan-500">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
 										width="24"
@@ -411,7 +392,7 @@
 										stroke-width="2"
 										stroke-linecap="round"
 										stroke-linejoin="round"
-										class="h-5 w-5 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-zinc-50">
+										class="absolute w-5 h-5 transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 text-zinc-50">
 										<rect
 											width="18"
 											height="18"
@@ -430,7 +411,7 @@
 										class="font-bold font-jakarta group-hover:text-cyan-500">
 										Pembayaran biaya di Akhir Bulan.
 									</h5>
-									<p class="text-zinc-600 leading-relaxed">
+									<p class="leading-relaxed text-zinc-600">
 										Pembayaran dilakukan diakhir bulan
 										melalui transfer ke rekening
 										TutorQMedan.com.Jadi tidak melakukan
@@ -438,9 +419,9 @@
 									</p>
 								</div>
 							</div>
-							<div class="flex group items-start space-x-4 py-4">
+							<div class="flex items-start py-4 space-x-4 group">
 								<div
-									class="relative h-10 w-10 bg-cyan-500 rounded-full flex-none">
+									class="relative flex-none w-10 h-10 rounded-full bg-cyan-500">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
 										width="24"
@@ -451,7 +432,7 @@
 										stroke-width="2"
 										stroke-linecap="round"
 										stroke-linejoin="round"
-										class="h-5 w-5 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-zinc-50">
+										class="absolute w-5 h-5 transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 text-zinc-50">
 										<path d="M6 3h12l4 6-10 13L2 9Z" />
 										<path d="M11 3 8 9l4 13 4-13-3-6" />
 										<path d="M2 9h20" />
@@ -462,7 +443,7 @@
 										class="font-bold font-jakarta group-hover:text-cyan-500">
 										Guru Les yang berkualitas
 									</h5>
-									<p class="text-zinc-600 leading-relaxed">
+									<p class="leading-relaxed text-zinc-600">
 										Guru-guru yang kami pilih sudah memiliki
 										pengalaman dan lulu seleksi serta micro
 										teaching. Orang tua bisa request
@@ -477,22 +458,22 @@
 		</section>
 
 		<section class="py-20 bg-cyan-500 text-zinc-50">
-			<div class="container mx-auto px-4">
-				<span class="text-zinc-50 text-center block font-bold">
+			<div class="container px-4 mx-auto">
+				<span class="block font-bold text-center text-zinc-50">
 					Keunggulan
 				</span>
 				<h3
-					class="text-center font-extrabold font-jakarta text-3xl lg:text-4xl mb-4">
+					class="mb-4 text-3xl font-extrabold text-center font-jakarta lg:text-4xl">
 					Alasan Lain memilih Tutor Q
 				</h3>
 				<p
-					class="text-cyan-50 leading-relaxed mb-8 max-w-4xl text-center mx-auto">
+					class="max-w-4xl mx-auto mb-8 leading-relaxed text-center text-cyan-50">
 					Kami menyediakan beberapa program yang dapat anda pilih
 					sesuai dengan kebutuhan anda, berikut adalah program yang
 					kami tawarkan.
 				</p>
 
-				<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+				<div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
 					<div class="flex flex-col p-8 rounded-xl bg-cyan-600">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -504,16 +485,16 @@
 							stroke-width="2"
 							stroke-linecap="round"
 							stroke-linejoin="round"
-							class="h-8 w-8 text-white mb-4">
+							class="w-8 h-8 mb-4 text-white">
 							<path
 								d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" />
 							<polyline points="10 2 10 10 13 7 16 10 16 2" />
 						</svg>
 
-						<h5 class="font-bold font-jakarta mb-4">
+						<h5 class="mb-4 font-bold font-jakarta">
 							Guru Les yang berkualitas
 						</h5>
-						<p class="text-cyan-50 leading-relaxed mb-5">
+						<p class="mb-5 leading-relaxed text-cyan-50">
 							Kami selalu memantau dan mengevaluasi perkembangan
 							belajar siswa. Kami juga memantau dan memastikan
 							guru hadir sesuai jadwal dan memberikan pengajaran
@@ -533,7 +514,7 @@
 							stroke-width="2"
 							stroke-linecap="round"
 							stroke-linejoin="round"
-							class="h-8 w-8 text-white mb-4">
+							class="w-8 h-8 mb-4 text-white">
 							<path
 								d="M8 3H2v15h7c1.7 0 3 1.3 3 3V7c0-2.2-1.8-4-4-4Z" />
 							<path d="m16 12 2 2 4-4" />
@@ -541,10 +522,10 @@
 								d="M22 6V3h-6c-2.2 0-4 1.8-4 4v14c0-1.7 1.3-3 3-3h7v-2.3" />
 						</svg>
 
-						<h5 class="font-bold font-jakarta mb-4">
+						<h5 class="mb-4 font-bold font-jakarta">
 							Full Services
 						</h5>
-						<p class="text-cyan-50 leading-relaxed mb-5">
+						<p class="mb-5 leading-relaxed text-cyan-50">
 							Kami siap membantu dan menjadi solusi atas
 							permasalahan Anda terkait perkembangan belajar putra
 							putri Anda, pergantian tutor, penambahan atau
@@ -558,18 +539,18 @@
 		</section>
 
 		<section id="alamat" class="py-20 bg-zinc-50">
-			<div class="container mx-auto px-4">
-				<span class="text-cyan-500 text-center block font-bold">
+			<div class="container px-4 mx-auto">
+				<span class="block font-bold text-center text-cyan-500">
 					Alamat
 				</span>
 				<h3
-					class="text-center font-extrabold font-jakarta text-3xl lg:text-4xl mb-4">
+					class="mb-4 text-3xl font-extrabold text-center font-jakarta lg:text-4xl">
 					Alamat Kami
 				</h3>
 				<p
-					class="text-zinc-600 leading-relaxed mb-5 max-w-4xl text-center mx-auto text-balance">
+					class="max-w-4xl mx-auto mb-5 leading-relaxed text-center text-zinc-600 text-balance">
 					<span
-						class="underline decoration-cyan-500 decoration-wavy hover:bg-cyan-500 hover:text-zinc-50 transition duration-200 ease-in-out underline-offset-2 hover:no-underline cursor-default">
+						class="underline transition duration-200 ease-in-out cursor-default decoration-cyan-500 decoration-wavy hover:bg-cyan-500 hover:text-zinc-50 underline-offset-2 hover:no-underline">
 						TutorQMedan.com
 					</span>
 					beralamat di Tasbi 1 Blok AA No. 50 Medan Sunggal, Kota
@@ -582,42 +563,42 @@
 					loading="lazy"
 					allowfullscreen="false"
 					referrerpolicy="no-referrer-when-downgrade"
-					class="mx-auto w-full rounded-xl focus:outline-none">
+					class="w-full mx-auto rounded-xl focus:outline-none">
 				</iframe>
 			</div>
 		</section>
 
 		<footer class="py-20 bg-zinc-100">
-			<div class="container mx-auto px-4">
-				<div class="flex items-start justify-between flex-wrap">
+			<div class="container px-4 mx-auto">
+				<div class="flex flex-wrap items-start justify-between">
 					<div class="w-full max-w-sm">
-						<a href="#" class="flex items-center space-x-2 mb-4">
+						<a href="#" class="flex items-center mb-4 space-x-2">
 							<img
 								src="images/logo.svg"
 								alt="logo"
-								class="h-8 w-8" />
-							<span class="font-extrabold font-jakarta text-lg">
+								class="w-8 h-8" />
+							<span class="text-lg font-extrabold font-jakarta">
 								Tutorqmedan
 							</span>
 						</a>
-						<p class="text-zinc-600 leading-relaxed mb-5">
+						<p class="mb-5 leading-relaxed text-zinc-600">
 							Kami siap membantu dan menjadi solusi atas
 							permasalahan Anda terkait perkembangan belajar putra
 							putri Anda.
 						</p>
 
-						<p class="text-zinc-600 leading-relaxed mb-5">
-							<span class="font-bold block">Alamat</span>
+						<p class="mb-5 leading-relaxed text-zinc-600">
+							<span class="block font-bold">Alamat</span>
 							Tasbi 1 Blok AA No. 50 Medan Sunggal
 							<br />
-							<span class="font-bold block">Email</span>
+							<span class="block font-bold">Instagram</span>
 							<a
-								href="mailto:lesprivatmedan@gmail.com"
+								href="https://www.instagram.com/tutorqprivatemedan"
 								class="hover:text-cyan-500">
-								lesprivatmedan@gmail.com
+								@tutorqprivatemedan
 							</a>
 							<br />
-							<span class="font-bold block">Telepon</span>
+							<span class="block font-bold">Telepon</span>
 							<a
 								href="tel:+6285831563835"
 								class="hover:text-cyan-500">
@@ -628,7 +609,7 @@
 
 					<div class="grid grid-cols-2 gap-10">
 						<nav>
-							<h5 class="font-bold font-jakarta mb-4">Menu</h5>
+							<h5 class="mb-4 font-bold font-jakarta">Menu</h5>
 							<ul>
 								<li>
 									<a href="#" class="hover:text-cyan-500">
@@ -660,10 +641,10 @@
 						</nav>
 
 						<div>
-							<h5 class="font-bold font-jakarta mb-4">
+							<h5 class="mb-4 font-bold font-jakarta">
 								Tutor Q Privat Medan
 							</h5>
-							<p class="text-zinc-600 leading-relaxed mb-5">
+							<p class="mb-5 leading-relaxed text-zinc-600">
 								<span class="font-bold">Senin - Jumat</span>
 								07.00 - 22.00
 								<br />
